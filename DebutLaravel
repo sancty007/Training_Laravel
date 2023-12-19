@@ -8,3 +8,155 @@ Voici comment vous pouvez exécuter la commande Composer en ignorant temporairem
 
 composer create-project laravel/laravel=10 DebutLaravel(nom du projet ) --ignore-platform-req=ext-fileinfo  (en cas d'erreur : )
 
+### La structure d'un projet laravel :
+
+project/
+│
+├── app/
+│   ├── Console/
+│   ├── Exceptions/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   ├── Middleware/
+│   │   ├── Requests/
+│   │   └── Kernel.php
+│   ├── Models/
+│   └── Providers/
+│
+├── bootstrap/
+│
+├── config/
+│
+├── database/
+│   ├── factories/
+│   ├── migrations/
+│   └── seeds/
+│
+├── public/
+│   ├── css/
+│   ├── js/
+│   ├── images/
+│   ├── index.php
+│   └── .htaccess
+│
+├── resources/
+│   ├── lang/
+│   ├── views/
+│   └── assets/
+│
+├── routes/
+│   ├── web.php
+│   ├── api.php
+│   └── console.php
+│
+├── storage/
+│   ├── app/
+│   ├── framework/
+│   ├── logs/
+│   └── ...
+│
+├── tests/
+│
+├── vendor/
+│
+├── .env
+├── .env.example
+├── artisan
+├── composer.json
+├── composer.lock
+└── ...
+
+La structure d'un projet Laravel suit une architecture bien définie qui suit généralement le modèle MVC (Modèle-Vue-Contrôleur). Voici une explication schématique de la structure typique d'un projet Laravel :
+
+```
+project/
+│
+├── app/
+│   ├── Console/
+│   ├── Exceptions/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   ├── Middleware/
+│   │   ├── Requests/
+│   │   └── Kernel.php
+│   ├── Models/
+│   └── Providers/
+│
+├── bootstrap/
+│
+├── config/
+│
+├── database/
+│   ├── factories/
+│   ├── migrations/
+│   └── seeds/
+│
+├── public/
+│   ├── css/
+│   ├── js/
+│   ├── images/
+│   ├── index.php
+│   └── .htaccess
+│
+├── resources/
+│   ├── lang/
+│   ├── views/
+│   └── assets/
+│
+├── routes/
+│   ├── web.php
+│   ├── api.php
+│   └── console.php
+│
+├── storage/
+│   ├── app/
+│   ├── framework/
+│   ├── logs/
+│   └── ...
+│
+├── tests/
+│
+├── vendor/
+│
+├── .env
+├── .env.example
+├── artisan
+├── composer.json
+├── composer.lock
+└── ...
+```
+
+Explication de la structure :
+
+- **app/** : Contient les composants de l'application comme les contrôleurs, les modèles, les requêtes, etc.
+  - **Console/** : Commandes personnalisées pour l'artisan CLI.
+  - **Exceptions/** : Gère les exceptions et les erreurs.
+  - **Http/** : Gère les contrôleurs, les middlewares, les requêtes HTTP et le Kernel.
+  - **Models/** : Contient les modèles de données de l'application.
+  - **Providers/** : Fournit des services et des configurations pour l'application.
+
+- **bootstrap/** : Contient des fichiers pour initialiser l'application.
+
+- **config/** : Fichiers de configuration pour diverses parties de l'application.
+
+- **database/** : Contient les migrations de base de données, les seeders et les factories pour générer des données de test.
+
+- **public/** : Répertoire accessible publiquement contenant les fichiers statiques (CSS, JS, images) et le point d'entrée (`index.php`).
+
+- **resources/** : Contient les fichiers non exécutables tels que les vues, les fichiers de langues et les assets (Sass, Less, etc.).
+
+- **routes/** : Définition des routes de l'application.
+
+- **storage/** : Contient les fichiers générés par l'application (logs, fichiers temporaires, etc.).
+
+- **tests/** : Répertoire pour les tests automatisés.
+
+- **vendor/** : Contient les dépendances installées via Composer.
+
+- **.env** : Fichier de configuration pour les variables d'environnement.
+
+- **artisan** : Outil de ligne de commande pour effectuer diverses tâches.
+
+- **composer.json** et **composer.lock** : Fichiers de configuration et de verrouillage des dépendances.
+
+Cette structure est conçue pour organiser les différents composants de l'application de manière logique et modulaire, suivant le paradigme de développement MVC et facilitant la gestion, la maintenance et l'évolutivité des projets Laravel.
