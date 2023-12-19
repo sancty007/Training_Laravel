@@ -1,0 +1,10 @@
+## Debut avec Laravel 
+
+### installation de composer : https://getcomposer.org/download/
+-- installer php 8.1 
+
+
+Voici comment vous pouvez exécuter la commande Composer en ignorant temporairement l'extension manquante :
+
+composer create-project laravel/laravel=10 DebutLaravel(nom du projet ) --ignore-platform-req=ext-fileinfo  (en cas d'erreur : )
+
