@@ -1,0 +1,8 @@
+1 - autoload.php de Composer n'est pas présent dans le répertoire vendor de votre projet Laravel
+  
+  php artisan server
+  Failed to open stream: No such file or directory ... vendor/autoload.php
+## Solution :
+  composer install
+
+
